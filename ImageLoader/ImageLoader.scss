@@ -1,0 +1,25 @@
+.ImageLoader {
+    overflow: hidden;
+    position: relative;
+
+    .Loaded, .Loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.7s ease-in-out;        
+        opacity: 1;
+        &.Hide {
+            opacity: 0;
+        }
+    }
+    .Loading {
+        -webkit-filter: blur(8px);
+        filter: blur(8px);
+        z-index: 0;
+    }
+    .Loaded {
+        z-index: 0;
+    }
+}
